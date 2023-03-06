@@ -60,11 +60,11 @@ function App() {
         answers:[
           {
             text: "Peter Obi",
-            correct: false,
+            correct: true,
           },
           {
             text:"Bola Amhmed Tinubu",
-            correct:true,
+            correct:false,
           },
           {
             text: "Atiku",
