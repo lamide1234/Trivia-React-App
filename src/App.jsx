@@ -12,7 +12,7 @@ function App() {
   const data= [
       {
         id:1,
-        question:"who won 2023 elections?",
+        question:"who won 2023 elections in Nigeria?",
         answers:[
           {
             text: "Peter Obi",
@@ -77,6 +77,7 @@ function App() {
         ]
       }
     ];
+    
   const moneyPyramid= useMemo(()=>{ [
   {id:1, amount:"₦5,000"},
   {id:2, amount:"₦7,500"},
