@@ -12,7 +12,7 @@ function App() {
   const data= [
       {
         id:1,
-        question:"who won 2023 elections in Nigeria?",
+        question:"who won 2023 elections in Nigeria",
         answers:[
           {
             text: "Peter Obi",
