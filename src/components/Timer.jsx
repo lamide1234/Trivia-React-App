@@ -5,7 +5,7 @@ export default function Timer({setStop, questionNumber}) {
     useEffect(()=>{
         if(timer===0) return setStop(true);
         const interval= setInterval(()=>{
-            setTimer((prev)=>-1);
+            setTimer((prev) => prev -1);
         },1000);
     return()=>clearInterval(interval);
 }, [setStop, timer]);

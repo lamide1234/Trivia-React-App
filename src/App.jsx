@@ -1,15 +1,18 @@
 import { useEffect, useMemo, useState } from "react";
+import { easyQuestions, mediumQuestions, hard } from "./questions";
 import "./app.css"
-import Timer from "./components/timer";
+import Timer from "./components/Timer";
 import Trivia from "./components/Trivia";
+import Start from "./components/Start";
 function App() {
+  const[username, setUsername]= useState(null);
   const[ questionNumber, setQuestionNumber]= useState(1);
-  const[timeOut, setTimeOut]=useState(false);
+  const[difficulty, setDifficulty]=useState(easyQuestions);
   const[stop, setStop]=useState(false);
   const[earned,setEarned]= useState("₦ 0");
 
-
-  const data= [
+console.log("diff>>", difficulty)
+  const data = [
       {
         id:1,
         question:"who won 2023 elections in Nigeria",
@@ -77,8 +80,12 @@ function App() {
         ]
       }
     ];
+
     
-  const moneyPyramid= useMemo(()=>{ [
+
+
+    
+  const moneyPyramid= useMemo(()=>[
   {id:1, amount:"₦5,000"},
   {id:2, amount:"₦7,500"},
   {id:3, amount:"₦10,000"},
@@ -95,8 +102,9 @@ function App() {
   {id:14, amount:"₦5 Million"},
   {id:15, amount:"10 Million"},
 
-] .reverse(); 
-},[]);
+] .reverse(),
+  []
+  );
 
   useEffect(()=>{
     questionNumber>1 && setEarned(moneyPyramid.find(m=> m.id===questionNumber-1).amount);},[moneyPyramid, questionNumber]);
@@ -104,7 +112,9 @@ function App() {
 
   return (
     <div className="app">
-    <div className="main">
+      {username? (
+        <>
+      <div className="main">
       {stop? (<h1 className="endText">You earned: {earned}</h1>): (
         <>
       
@@ -113,9 +123,9 @@ function App() {
         </div>
       </div>
       <div className="bottom">
-      <Trivia data={data} 
+      <Trivia data={easyQuestions} 
       setStop={setStop}
-      setTimeOut={setTimeOut}
+     
       questionNumber={questionNumber}
       setQuestionNumber={setQuestionNumber}
       />
@@ -125,14 +135,15 @@ function App() {
     </div>
 
     <div className="pyramid">
+      {/*
         <div  className= "stuck">
           <div className="50/50">...</div>
           <div className= "call a friend"></div>
           <div className="audience"></div>
         </div>
-
+      */}
       <ul className="moneyList">
-        {moneyPyramid.map((m)=>(
+        {moneyPyramid?.map((m)=>(
         <li className={questionNumber===m.id? "moneyListItem active": "moneyListItem"}> 
           <span className="moneyListItemNumber">{m.id}</span>
           <span className="moneyListItemAmount">{m.amount}</span>
@@ -141,6 +152,10 @@ function App() {
       </ul>
 
     </div>
+        </>
+      ): (<Start setUsername={setUsername}/>
+    )}
+    
     </div>
   );
 }
