@@ -1,66 +1,66 @@
 export const easyQuestions= [
     {
       id:1,
-      question:"who won 2023 elections in Nigeria",
+      question:"Which big cat is the largest?",
       answers:[
         {
-          text: "Peter Obi",
+          text: "Lion",
           correct: false,
         },
         {
-          text:"Bola Amhmed Tinubu",
+          text:"Tiger",
           correct:true,
         },
         {
-          text: "Atiku",
+          text: "Leopard",
           correct: false,
          },
         {
-          text: "kwakwanso",
+          text: "Cheetah",
           correct: false, 
         } ,  
       ] ,
     },
     {
       id:2,
-      question: "Generation Z is for what range of years?",
+      question: "Which is the largest planet in the solar system?",
       answers:[
         {
-          text: "1995-2012",
+          text: "Jupiter",
           correct:true,
         },
         {
-          text:"1965-1979",
+          text:"Uranus",
           correct:false,
         },
         {
-          text:"2015-2025",
+          text:"Saturn",
           correct: false,
         },
         {
-          text:"1980-1994",
+          text:"Neptune",
           correct:false,
         },
       ]
     },
     {
       id:3,
-      question: "who was the people's choice in nigeria's 2023 election?",
+      question: "What is the fastest aquatic animal?",
       answers:[
         {
-          text: "Peter Obi",
+          text: "Sailfish",
           correct: true,
         },
         {
-          text:"Bola Amhmed Tinubu",
+          text:"Shark",
           correct:false,
         },
         {
-          text: "Atiku",
+          text: "Tilapia",
           correct: false,
          },
         {
-          text: "kwakwanso",
+          text: "Seahorse",
           correct: false, 
         } ,  
       ]
@@ -70,66 +70,66 @@ export const easyQuestions= [
  export const mediumQuestions= [
     {
       id:1,
-      question:"who won 2023 elections in Nigeria",
+      question:"Which planet is the hottest in the solar system?",
       answers:[
         {
-          text: "Peter Obi",
+          text: "Mercury",
           correct: false,
         },
         {
-          text:"Bola Amhmed Tinubu",
-          correct:true,
+          text:"Neptune",
+          correct:false,
         },
         {
-          text: "Atiku",
+          text: "Saturn",
           correct: false,
          },
         {
-          text: "kwakwanso",
-          correct: false, 
+          text: "Venus",
+          correct: true, 
         } ,  
       ] ,
     },
     {
       id:2,
-      question: "Generation Z is for what range of years?",
+      question: "How many valves does the heart have?",
       answers:[
         {
-          text: "1995-2012",
-          correct:true,
-        },
-        {
-          text:"1965-1979",
+          text: "Two",
           correct:false,
         },
         {
-          text:"2015-2025",
-          correct: false,
+          text:"Three",
+          correct:false,
         },
         {
-          text:"1980-1994",
+          text:"Four",
+          correct: true,
+        },
+        {
+          text:"Five",
           correct:false,
         },
       ]
     },
     {
       id:3,
-      question: "who was the people's choice in nigeria's 2023 election?",
+      question: "What is the common name for ascorbic acid?",
       answers:[
         {
-          text: "Peter Obi",
-          correct: true,
+          text: "Vitamin B12",
+          correct: false,
         },
         {
-          text:"Bola Amhmed Tinubu",
-          correct:false,
+          text:"Vitamin C",
+          correct:true,
         },
         {
-          text: "Atiku",
+          text: "Vitamin K",
           correct: false,
          },
         {
-          text: "kwakwanso",
+          text: "Vitamin D",
           correct: false, 
         } ,  
       ]
@@ -139,22 +139,22 @@ export const easyQuestions= [
   export const hardQuestions= [
     {
       id:1,
-      question:"who won 2023 elections in Nigeria",
+      question:"What color does gold leaf appear if you hold it up to the light?",
       answers:[
         {
-          text: "Peter Obi",
+          text: "Gold",
           correct: false,
         },
         {
-          text:"Bola Amhmed Tinubu",
+          text:"Green",
           correct:true,
         },
         {
-          text: "Atiku",
+          text: "Yellow",
           correct: false,
          },
         {
-          text: "kwakwanso",
+          text: "No colour",
           correct: false, 
         } ,  
       ] ,
@@ -183,22 +183,22 @@ export const easyQuestions= [
     },
     {
       id:3,
-      question: "who was the people's choice in nigeria's 2023 election?",
+      question: "What were the earliest forms of contraceptive made from?",
       answers:[
         {
-          text: "Peter Obi",
+          text: "Crocodile Dung",
           correct: true,
         },
         {
-          text:"Bola Amhmed Tinubu",
+          text:"Tree Bark",
           correct:false,
         },
         {
-          text: "Atiku",
+          text: "Honey",
           correct: false,
          },
         {
-          text: "kwakwanso",
+          text: "Fermented Pineapples",
           correct: false, 
         } ,  
       ]

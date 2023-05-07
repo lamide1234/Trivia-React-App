@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { easyQuestions, mediumQuestions, hard } from "./questions";
+import { easyQuestions, mediumQuestions, hardQuestions } from "./questions";
 import "./app.css"
 import Timer from "./components/Timer";
 import Trivia from "./components/Trivia";
@@ -7,12 +7,13 @@ import Start from "./components/Start";
 function App() {
   const[username, setUsername]= useState(null);
   const[ questionNumber, setQuestionNumber]= useState(1);
-  const[difficulty, setDifficulty]=useState(easyQuestions);
+  // const[difficulty, setDifficulty]=useState("easy");
+  const[level, setlevel]=useState(easyQuestions);
   const[stop, setStop]=useState(false);
   const[earned,setEarned]= useState("₦ 0");
 
-console.log("diff>>", difficulty)
-  const data = [
+// console.log("diff>>", difficulty)
+ /* const data = [
       {
         id:1,
         question:"who won 2023 elections in Nigeria",
@@ -80,8 +81,16 @@ console.log("diff>>", difficulty)
         ]
       }
     ];
-
-    
+*/
+const handleDifficulty = (difficulty) => {
+  if (difficulty === "easy") {
+     setlevel(easyQuestions)
+  } else if (difficulty === "medium") {
+    setlevel(mediumQuestions)
+  } else if (difficulty === "hard") {
+    setlevel(hardQuestions)
+  }
+}
 
 
     
@@ -123,7 +132,7 @@ console.log("diff>>", difficulty)
         </div>
       </div>
       <div className="bottom">
-      <Trivia data={easyQuestions} 
+      <Trivia data={level} 
       setStop={setStop}
      
       questionNumber={questionNumber}
@@ -153,7 +162,7 @@ console.log("diff>>", difficulty)
 
     </div>
         </>
-      ): (<Start setUsername={setUsername}/>
+      ): (<Start setUsername={setUsername} difficulty={handleDifficulty}/>
     )}
     
     </div>

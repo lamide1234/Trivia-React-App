@@ -222,7 +222,13 @@
     left: 0;
     margin: auto; 
   }
+  .title{
+    margin-bottom :80px;
+    font-size: 36px;
+    font-weight :40px ;
   
+  }
+
   .startInput {
     width: 100%;
     margin-bottom: 10px;
@@ -239,7 +245,7 @@
   .levels{
     display: flex;
   }
-  .startButton, .easy, .Medium, .Hard {
+   .easy, .Medium, .Hard {
     width: 50%;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -258,7 +264,7 @@
   }
   
   .startButton {
-    width: 100%;
+    width: 58%;
     background-color: #081155;
     border:2px solid rgb(255, 255, 255);
     color: white;

@@ -1,17 +1,22 @@
-import {useRef} from "react";
-export default function Start({setUsername}) {
+import {useRef, useState} from "react";
+
+export default function Start({setUsername, difficulty}) {
+    const[mode, setMode]=useState("easy");
     const inputRef=useRef();
     const handleClick= ()=>{
         inputRef.current.value && setUsername(inputRef.current.value);
     };
 
-    const handleDifficultyClick=(event)=>{
-    {/*setDifficulty(event.target.value);*/}
+    // const difficulty =(event)=>{
+    // {/*setDifficulty(event.target.value);*/}
 
-    };
+    // };
+
+    console.log("mode>>>", mode)
 
   return (
     <div className="start">
+      <div className="title">Who Wants to Be a Millionaire</div>
         <label>Username:
         <input 
         placeholder="enter your name" 
@@ -20,9 +25,9 @@ export default function Start({setUsername}) {
         />
         </label>
         <div className="levels">
-        <button className="easy" onClick={handleDifficultyClick}>Easy</button>
-        <button className="Medium" onClick={handleDifficultyClick}>Medium</button>
-        <button className="Hard" onClick={handleDifficultyClick}>Hard</button>
+        <button className="easy" onClick={() => setMode("easy")}>Easy</button>
+        <button className="Medium" onClick={() => setMode("medium")}>Medium</button>
+        <button className="Hard" onClick={() => setMode("hard")}>Hard</button>
         </div>
 
 
